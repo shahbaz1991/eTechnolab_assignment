@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+
+div{
+    border: 1px solid gainsboro;
+    min-width: 300px;
+    height: 180px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1.8%;
+    border-radius: 10px;
+    border-top: 10px solid #04acdf;
+    padding-left: 2%;;
+    box-sizing: border-box;
+}
+h1,p,a{
+    display: block;
+    margin-top: 4%;
+}
+@media screen and (max-width: 800px){
+    div{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+    }
+}

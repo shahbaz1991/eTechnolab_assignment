@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;    
+}
+body{
+    background-color: cornflowerblue;   
+    font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper{
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+#header{
+    background-color: rgb(10, 137, 241);
+    height: 15%;
+    padding-top: 1%; 
+    box-sizing: border-box;
+}
+#header h1{
+    font-size: 300%;
+    color: blue;
+    text-align: center; 
+}
+#main{    
+    /* border: 1px solid black; */
+    background-color: rgb(14, 240, 221);
+    height: 6%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+#main a{
+    text-align: left;
+    color: rgb(95, 5, 238);
+    text-decoration: none;
+    float: right;
+    padding-right: 2%;
+}
+
+#form{    
+    /* border: 1px solid #fff;     */
+    min-height: 50%; 
+    width: 100%;   
+    background-color: rgb(113, 210, 243);
+    box-sizing: border-box;   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+.ele{
+    border: 1px solid #bdbaba;
+    width: 50%;
+    min-height: 70px;   
+    border-radius: 10px;
+    background-color: white;     
+    padding: 2% 0 2% 2%;
+    margin: 1% 0;   
+    box-sizing: border-box;
+    position: relative;
+    
+}
+.ele textarea{
+    resize: none;
+    overflow: hidden;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid gray;
+    font-size: large;
+    width: 50%;      
+}
+.ele input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid gray;
+    font-size: 100%;
+    width: 50%;
+}
+.ele p{
+    margin-top: 1%;
+}
+.ele input[id='address']{
+    width: 90%;
+}
+.ele span{
+    color: red;
+}
+.gender input{
+    display: none; 
+}
+.gender{
+    width:25%;
+    height: 25px;
+    position: relative;
+    /* display: flow-root; */
+    display: flex;
+    flex-direction: row; 
+    box-sizing: border-box;
+}
+.gender:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.circle{
+    content: '';
+    border: 1px solid rgb(6, 118, 138);
+    width: 16%;
+    border-radius: 50%;
+    box-sizing: border-box;    
+}
+.circle::before{
+    content: '';
+    background-color: rgb(5, 161, 189) ;    
+    width: 72%;
+    height:72%;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    left: 50%;  
+    top: 51%;
+    transform: translate(-50%,-50%);    
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.gender label{
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding-left: 25%;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+.gender input:checked ~ div[class='circle']::before{
+    opacity: 1;
+}
+.error_msg{
+    color: red;
+}
+.error_msg::before{
+    display: inline-block;
+    content: '!';
+    border: 1.5px solid red;
+    width: 3%;
+    text-align: center;
+    border-radius: 50%;
+    color: red;
+    font-weight: bold;
+    margin-right: 1%;
+}
+.valid{
+    color: green;
+}
+#submit{
+    padding: 2% 3%;
+    color: #0825ca;
+    background-color:rgb(4, 185, 176);
+    font-size: 90%;
+    border: 1px solid rgb(15, 235, 217);
+    border-radius: 8px;
+    cursor: pointer;  
+}
+#submit:hover{
+    background-color:#06bdf5;
+}
+
+#footer{
+    background-color:rgb(14, 240, 221);
+    height: 5%;
+    padding-top: 0.5%;
+    padding-right: 2%;
+    box-sizing: border-box;
+       
+}
+#footer p{
+    color: #0c0294;   
+    float: right;  
+}
+
+@media screen and (max-width: 900px){
+    .ele{
+        width: 90%;
+    }
+    .circle::before{
+        top: 49%;
+        left: 49.5%;
+    }
+}
